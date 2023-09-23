@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> add new </title>
+        <link rel="stylesheet" href="style.css">
+
+        
+    </head>
+    <body>
+        <h1>Customer List </h1>
+        <hr>
+        <div id="maincontainer">
+            <form id="entryfield">
+                <legend style="text-decoration: underline; font-size:20px;text-align: center;"> Date Entry Field </legend><br>
+            
+                <label for="name">Name:</label>
+                <input type="text" id="namefield">
+                <label for="email">Email:</label>
+                <input type="text" id="emailfield">
+                <label for="address">Address:</label>
+                <input type="text" id="addressfield">
+                <label for="gender">Gender</label>
+                <select type="gender" id="genderfield">Gender
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="undefined">Undefined</option>                
+                </select>
+                <button title="enter new" type="button" id="submit" onclick="addPerson()"> Submit </button><br>
+                <button title="edit table" type="button" id="edit"  onclick="editPerson()"> Edit  </button><br>
+                <button title="create a fake person" type="button" id="create" onclick="createPerson()"> Create Person </button>
+            </form>
+            
+            <div id="tableContainer">
+            <table id="showinfo">
+                <legend style="text-decoration:underline;font-size:20px;">Customer Info</legend> 
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                </tr>
+                
+                
+            </table>
+            </div>
+
+            
+        </div>
+
+        <div id="editArea">
+            <label for="editData">EDIT:</label>
+            <input type="text" id="editEntry">
+            
+            <button id="editEntryButton" onclick="editInBox()">Edit Mode OFF </button>
+            <button id="submitEditedButton">Submit New Data </button>
+        </div>
+
+        <script src="customer.js"></script>
+    </body>
+</html>
